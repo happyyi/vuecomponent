@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@mixin flex($direction:column,$inline:block) {
+    display: if($inline==block,flex,inline-flex);
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+
+@mixin center-block{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin textOverflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+// mixin的调用方式是 @include  
